@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>O que é Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        
+        <br>
+
+        <input v-model="titulo">
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var app = new Vue({
+            el : "#app",
+            data : {
+                titulo : "O que é Vue.js"
+            }
+        });        
+    </script>    
+</body>
+</html>

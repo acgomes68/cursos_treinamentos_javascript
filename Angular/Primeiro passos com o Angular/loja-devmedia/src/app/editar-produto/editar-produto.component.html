@@ -1,0 +1,21 @@
+<p>
+  Edição de Produto
+</p>
+<form (submit)="salvar()">
+  Id: {{ produto.id }}<br />
+  Nome: {{ produto.nome }}<br />
+
+  <br />
+
+  <input type="text" name="id" [(ngModel)]="produto.id" value="{{ produto.id }}" /><br />
+  <input upperCase [class.alerta]="produto.nome.length > 15" required type="text" name="nome" [(ngModel)]="produto.nome" value="{{ produto.nome }}" /><br />
+  <!-- <input [style.backgroundColor]="produto.nome.length > 15 ? '#ff0000' : '#fff'" type="text" name="nome" [(ngModel)]="produto.nome" value="{{ produto.nome }}" /><br /> -->
+  <div [style.display]="produto.nome.length > 15 ? 'block' : 'none'">Evite nomes com mais de 15 caracteres.</div>
+  <div *ngIf="produto.nome.length > 15">Evite nomes com mais de 15 caracteres.</div>
+
+  <input type="submit" value="Salvar">
+</form>
+
+<br />
+
+Div: <div [textContent]="debug"></div>

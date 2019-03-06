@@ -1,0 +1,21 @@
+├── css
+│   ├── bootstrap.min.css
+│   └── bootstrap-theme.min.css
+├── fonts
+├── index.html
+├── js
+│   ├── controllers
+│   │   └── task.js
+│   ├── localdb
+│   │   └── db.js
+│   ├── main.js
+│   └── todo.js
+├── lib
+│   ├── angular.min.js
+│   ├── angular-route.min.js
+│   ├── bootstrap.min.js
+│   ├── jquery.min.js
+│   ├── require.js
+│   └── zondb-min.js
+└── partials
+    └── home.html

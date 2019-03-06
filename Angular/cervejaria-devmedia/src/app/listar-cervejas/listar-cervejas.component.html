@@ -1,0 +1,19 @@
+<div class="ibox-content">
+  <button class="btn btn-primary" type="button" (click)="novo()">Novo</button>   
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>IBU</th>
+        <th>Cor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cerveja of cervejas">
+        <td><a href="javascript:;" (click)="editarCerveja(cerveja)">{{cerveja.nome}}</a></td>
+        <td>{{cerveja.ibu}}</td>
+        <td>{{cerveja.cor}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

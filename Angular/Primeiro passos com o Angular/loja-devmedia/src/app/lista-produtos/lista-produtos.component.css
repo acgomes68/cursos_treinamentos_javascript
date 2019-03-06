@@ -1,0 +1,16 @@
+table {
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 1px solid black;
+}
+
+table tr td:first-child,
+table tfoot tr td:last-child  {
+    text-align: right;
+}
+
+table tfoot tr td {
+    font-weight: bold;
+}

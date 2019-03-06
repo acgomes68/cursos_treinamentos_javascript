@@ -1,0 +1,21 @@
+Task name: <input ng-model="taskName" class="form input-sm">
+<button ng-click="saveTask()" class="btn btn-info btn-sm">Save</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Task description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="task in tasks">
+      <td>{{task.id}}</td>
+      <td>{{task.name}}</td>
+      <td>
+        <span class="btn btn-xs glyphicon glyphicon-remove" ng-click="removeTask(task.id)"></span>
+        <span class="btn btn-xs glyphicon glyphicon-pencil" ng-click="editTask(task.id)"></span>
+      </td>
+    </tr>
+  </tbody>
+</table>

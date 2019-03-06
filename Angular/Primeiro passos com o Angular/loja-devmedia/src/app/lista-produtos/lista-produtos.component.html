@@ -1,0 +1,26 @@
+<div *ngIf="produtos.length > 0">
+    Temos {{ produtos.length }} produto(s) cadastrado(s).
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of produtos">
+          <td>{{ produto.id }}</td>
+          <td>{{ produto.nome }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>{{ produtos.length }}</td>
+        </tr>
+      </tfoot>
+    </table>
+</div>
+<div *ngIf="produtos.length <= 0">
+  Não temos produtos cadastrados.
+</div>

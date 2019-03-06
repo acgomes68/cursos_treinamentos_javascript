@@ -1,0 +1,12 @@
+{
+  "name": "MiniRedeSocial",
+  "version": "0.0.1",
+  "description": "Mini rede social volátil em tempo real",
+  "main": "index.js",
+  "author": "Willian Carvalho",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "~0.9.16",
+    "express": "~3.4.8"
+  }
+}
