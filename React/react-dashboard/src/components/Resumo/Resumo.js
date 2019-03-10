@@ -5,8 +5,8 @@ class Resumo extends Component {
         super(props);
         this.state = {
             consultas : {
-                consulta_30dias_anteriores: 0,
-                consulta_30dias_posteriores: 0
+                consultas_30dias_anteiores: 0,
+                consultas_30dias_posteriores: 0
             },
             faturamento : {
                 anterior : {
@@ -19,6 +19,11 @@ class Resumo extends Component {
                 }
             }
         }
+    }
+
+    componentDidMount() {
+        fetch('http://www.devup.com.br/php/api-dashboard/api/resumo')
+        .then(resultado => resultado.json().then(dados => this.setState(dados)));
     }
 
     render() {
@@ -37,7 +42,7 @@ class Resumo extends Component {
                                         30 dias anteriores
                                     </div>
                                     <div className="card-body">
-                                        { this.state.consultas.consultas_30dias_anteriores }
+                                        { this.state.consultas.consultas_30dias_anteiores }
                                     </div>
                                 </div>
                             </div>

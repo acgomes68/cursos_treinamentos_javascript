@@ -8,6 +8,11 @@ class _Modelo extends Component {
         }
     }
 
+    componentDidMount() {
+        fetch('endpoint')
+        .then(resultado => resultado.json().then(dados => this.setState(dados)));
+    }
+
     render() {
         return (
             <div>
